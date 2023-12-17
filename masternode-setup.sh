@@ -378,9 +378,6 @@ install_nginx() {
         echo ""
         # Prompt for confirmation
         read -p "Type yes to continue: " confirmation
-        if [ "$confirmation" == "yes" ]; then
-            return
-        fi
         echo ""
         echo "--------------------------------------------------------------------------------------"
         echo ""
