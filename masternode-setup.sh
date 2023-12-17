@@ -508,7 +508,7 @@ get_user_input() {
 	echo "Voting Key Address: $voting_key_addr"
 	echo "Payout Key Address: $payout_address"
 	echo "Fee Source Key Address: $fee_source_address"
-
+        echo ""
         read -p "Type yes to continue: " confirmation
 
 }
@@ -610,7 +610,7 @@ sign_prepare() {
 
 ############################
 register_submit() {
-	register_submit_command="protx register_submit $tx_id \"$sign_message_output\""
+	register_submit_command="protx register_submit $tx_value $sign_message_output"
 	
 	echo ""
         echo "----------------------------------------------------------------------------------------"
@@ -626,16 +626,18 @@ register_submit() {
 	echo "To open the Debug Console, go to Historia Core Desktop Wallet -> Tools -> Debug Console."
 	echo "After pasting the command, press Enter to submit the signed message and complete the ProRegTx registration."
 	echo ""
+
+}
+############################
+register_submit(){
+	echo "---------------------------------------------------------------------------------------------------------"
 	echo "Congratulations! If you've followed everything here, your masternode should appear on the network and enabled on the network in 1 block."
 	echo "You can check that your masternode is enabled here: https://historia.network/masternodes"
 	echo ""
  	echo "You can also confirm that your IPFS is connecting to the Historia Network Blockchain by going to https://<yourDNSName>/ipfs/Qmd76KSvQn51VpsputPNGgdpAQsd73E5ZRxqjhtBsrGS6b/"
 	read -p "Once you see an output like 'aba8c22f8992d78fd4ff0c94cb19a5c30e62e7587ee43d5285296a4e6e5af062', you have completed the masternode process. Press Enter to exit."
-
-
+	echo "---------------------------------------------------------------------------------------------------------"
 }
-############################
-
 
 ############################
 # Introductory paragraph
