@@ -143,7 +143,7 @@ get_collateral_address() {
    	echo "Step 2: Once in the debug console type in 'getnewaddress'.This will be your"
 	echo "collateral address. Copy from the debug console and paste the collateral address"
         echo "below:"
-        read -p "Collaterl Address: " collateral_address
+        read -p "Collateral Address: " collateral_address
 	echo "------------------------------------------------------------------------------"
         echo ""
 	echo "------------------------------------------------------------------------------"
@@ -422,7 +422,7 @@ send_fee_address() {
 	echo "wallet. You can do this by using the copying and pasting the following  command "
 	echo "in the Debug Console:"
         echo ""
-	echo "sendtoaddress $collateral_address 5000"
+	echo "sendtoaddress $collateral_address 5"
         echo
 	echo "------------------------------------------------------------------------------"
         echo ""
@@ -459,7 +459,7 @@ get_user_input() {
         echo ""
 	echo "In the Debug Console run: masternode outputs";
 	read -p "Enter the TX ID of masternode outputs (Example: 8b01c7ed45f3afaef2abb2616bac8eb732bd83b3d20fa1c5ff5e5b6ca150eb53 ): " tx_id
-	read -p "Enter the TX Index of masternode outputs (Example: 1) " tx_index
+	read -p "Enter the TX Index of masternode outputs (Example: 1):" tx_index
         echo ""
         echo "-----------------------------------------------------------------------------------------"
         echo ""
@@ -510,9 +510,6 @@ get_user_input() {
 	echo "Fee Source Key Address: $fee_source_address"
 
         read -p "Type yes to continue: " confirmation
-        if [ "$confirmation" == "yes" ]; then
-            break
-        fi
 
 }
 ############################
@@ -557,7 +554,7 @@ register_prepare() {
         if [ "$confirmation" == "yes" ]; then
 	        echo ""
 
-		register_prepare_command="protx register_prepare $tx_id $tx_index $current_ip:10101 $owner_key_addr $bls_public_key $voting_key_addr 0 $payout_address $ifps_id $domain_name $fee_source_address"
+		register_prepare_command="protx register_prepare $tx_id $tx_index $current_ip:10101 $owner_key_addr $bls_public_key $voting_key_addr 0 $payout_address $ipfs_id $domain_name $fee_source_address"
 		
 		
 		# Display the generated command
