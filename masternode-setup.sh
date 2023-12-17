@@ -1,6 +1,6 @@
 #!/bin/bash
 
-collaterl_address="unknown"
+collateral_address="unknown"
 domain_name="unknown"
 current_ip="uknown"
 ipfs_id="unknow"
@@ -495,10 +495,10 @@ get_user_input() {
         echo ""
         echo "Please review the information:"
         echo ""
-	echo "Collateral Addresss with 5000 HTA: $collaterl_address"
+	echo "Collateral Addresss with 5000 HTA: $collateral_address"
 	echo "Domain Name to Register your Masternode: $domain_name"
 	echo "IP Address to Register your Masternode:  $current_ip"
-	echo "IPFS Peer ID:  $ifps_id"
+	echo "IPFS Peer ID:  $ipfs_id"
 	echo "Masternode Outputs TX ID: $tx_id"
 	echo "Masternode Outputs TX Index: $tx_index"
 	echo "BLS Secret: $bls_secret"
