@@ -518,8 +518,7 @@ get_user_input() {
         echo ""
         echo "-----------------------------------------------------------------------------------------"
         echo ""
-	send_fee_address() 
-
+	
         echo ""
         echo "-----------------------------------------------------------------------------------------"
         echo ""
@@ -723,6 +722,7 @@ install_ipfs
 install_nginx
 check_sync_status
 get_user_input
+send_fee_address
 update_historia_conf
 register_prepare
 sign_prepare
