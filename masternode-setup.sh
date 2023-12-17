@@ -439,6 +439,30 @@ check_sync_status() {
 
 ############################
 
+############################
+send_fee_address() {
+    while true; do
+        echo ""
+        echo "---------------------------------------------------------------------------------"
+        echo "Step 3: Send 5 HTA to your fee address in your Historia Desktop"
+	echo "wallet. You can do this by using the copying and pasting the following  command "
+	echo "in the Debug Console:"
+        echo ""
+	echo "sendtoaddress $collateral_address 5000"
+        echo
+	echo "------------------------------------------------------------------------------"
+        echo ""
+
+        # Prompt for confirmation
+        read -p "After you have done that type yes to continue: " confirmation
+        if [ "$confirmation" == "yes" ]; then
+            break
+	else
+	    exit
+        fi
+    done
+}
+############################
 
 
 ############################
@@ -494,7 +518,7 @@ get_user_input() {
         echo ""
         echo "-----------------------------------------------------------------------------------------"
         echo ""
-
+	send_fee_address() 
 
         echo ""
         echo "-----------------------------------------------------------------------------------------"
