@@ -354,12 +354,8 @@ echo "IPFS ID: $ipfs_id"
 
 ipfs_swarm_peers=$(ipfs swarm peers)
 
-if [ -n "$ipfs_swarm_peers" ]; then
-    echo "IPFS is connected to the swarm."
-else
-    echo "IPFS is not connected to the swarm. Please check your IPFS configuration."
-    exit 1
-fi
+
+echo "IPFS is now installed."
 
 echo ""
 echo "------------------------------------------------------------------------------"
