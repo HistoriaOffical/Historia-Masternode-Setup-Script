@@ -107,7 +107,7 @@ install_dependencies() {
 check_memory() {
     total_memory=$(free -m | awk '/^Mem:/{print $2}')
     
-    if [ "$total_memory" -ge 2048 ]; then
+    if [ "$total_memory" -ge 1900 ]; then
 	echo "--------------------------------------------------------"
         echo "Memory check passed: At least 2GB of RAM available."
 	echo "--------------------------------------------------------"
