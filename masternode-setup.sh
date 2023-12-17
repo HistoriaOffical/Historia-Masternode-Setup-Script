@@ -629,7 +629,7 @@ register_submit() {
 
 }
 ############################
-register_submit(){
+register_end(){
 	echo "---------------------------------------------------------------------------------------------------------"
 	echo "Congratulations! If you've followed everything here, your masternode should appear on the network and enabled on the network in 1 block."
 	echo "You can check that your masternode is enabled here: https://historia.network/masternodes"
@@ -696,3 +696,4 @@ update_historia_conf
 register_prepare
 sign_prepare
 register_submit
+register_end
