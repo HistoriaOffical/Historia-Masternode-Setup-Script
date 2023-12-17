@@ -619,6 +619,7 @@ register_submit() {
         echo ""
 
 	echo "Generated protx register_submit command:"
+ 	echo ""
 	echo "$register_submit_command"
 
 	echo ""
