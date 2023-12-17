@@ -401,10 +401,6 @@ sudo certbot --nginx -d "$domain_name"
 # Check if Certbot succeeded
 if [ $? -eq 0 ]; then
     echo "Certbot successfully obtained the certificate for $domain_name."
-echo "1. ownerKeyAddr: $owner_key_addr"
-echo "2. votingKeyAddr: $voting_key_addr"
-echo "3. payoutAddress: $payout_address"
-echo "4. feeSourceAddress: $fee_source_address"
     # Reload Nginx to apply the changes
     sudo systemctl start nginx
 
@@ -425,19 +421,6 @@ fi
 }
 ############################
 
-
-############################
-check_sync_status() {
-    sync_status=$(~/.historiacore/historia-cli mnsync status)
-
-    while [[ ! $sync_status == *"MASTERNODE_SYNC_FINISHED"* ]]; do
-	echo "Historia blockchain wallet is not fully synced. Waiting for sync..."
-    	echo "Block Count: $(~/.historiacore/historia-cli getblockcount)"
-    	sleep 30  # Adjust the sleep duration as needed
-    done
-}
-
-############################
 
 ############################
 send_fee_address() {
@@ -720,7 +703,6 @@ send_collateral_address
 install_historia
 install_ipfs
 install_nginx
-check_sync_status
 get_user_input
 send_fee_address
 update_historia_conf
