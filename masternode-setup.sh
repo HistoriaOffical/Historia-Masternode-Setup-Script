@@ -188,7 +188,7 @@ install_historia() {
         echo "---------------------------------------------------------------------------------"
         echo ""
 	echo "Step 4: Next we will install Historia on this host (VPS)"
-	sleep 15
+	sleep 10
 	echo ""
 	echo "------------------------------------------------------------------------------"
         echo ""
