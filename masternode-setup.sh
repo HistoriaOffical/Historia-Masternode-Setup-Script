@@ -124,26 +124,6 @@ check_memory() {
 ############################
 
 ############################
-# Function to check available disk space
-check_disk_space() {
-    required_space=30000 # 50GB in megabytes
-    available_space=$(df -BM --output=avail / | sed -n '2p' | tr -d 'M')
-
-    if [ "$available_space" -ge "$required_space" ]; then
-	echo "---------------------------------------------------------------"
-        echo "Disk space check passed: At least 30GB of available disk space."
-	echo "---------------------------------------------------------------"
-    else
-	echo "----------------------------------------------------------------------------------"
-        echo "Disk space check failed: Less than 30GB of available disk space. Will not continue"
-	echo "----------------------------------------------------------------------------------"
-        echo ""
-       	exit 1
-    fi
-}
-############################
-
-############################
 next_steps() {
 
    echo ""
@@ -718,7 +698,6 @@ fi
 check_enter_domain_name
 install_dependencies
 check_memory
-check_disk_space
 next_steps
 get_collateral_address
 send_collateral_address
