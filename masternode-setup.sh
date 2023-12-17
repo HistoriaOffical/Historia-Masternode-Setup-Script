@@ -422,7 +422,7 @@ send_fee_address() {
 	echo "wallet. You can do this by using the copying and pasting the following  command "
 	echo "in the Debug Console:"
         echo ""
-	echo "sendtoaddress $collateral_address 5"
+	echo "sendtoaddress $fee_address 5"
         echo
 	echo "------------------------------------------------------------------------------"
         echo ""
