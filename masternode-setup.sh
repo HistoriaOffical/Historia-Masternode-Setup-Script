@@ -3,7 +3,7 @@
 collaterl_address="unknown"
 domain_name="unknown"
 current_ip="uknown"
-ifps_id="unknow"
+ipfs_id="unknow"
 tx_id="unknown"
 tx_index="unknown"
 
@@ -343,18 +343,9 @@ sudo systemctl enable ipfs.service
 sudo systemctl start ipfs.service
 
 echo "ipfs service has been created and started."
-sleep 10
-
-
-ipfs_id=$(ipfs id | grep -o '"ID": *"[^"]*"' | awk -F'"' '{print $4}')
-
-
-
+ipfs_id=$(ipfs id -f "<id>")
 echo "IPFS ID: $ipfs_id"
-
-ipfs_swarm_peers=$(ipfs swarm peers)
-
-
+sleep 10
 echo "IPFS is now installed."
 
 echo ""
@@ -463,9 +454,6 @@ get_user_input() {
         echo ""
         # Prompt for confirmation
         read -p "Type yes to continue: " confirmation
-        if [ "$confirmation" == "yes" ]; then
-            break
-        fi
         echo ""
         echo "-----------------------------------------------------------------------------------------"
         echo ""
