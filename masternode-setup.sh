@@ -672,7 +672,7 @@ echo "*but you might see some errors.*"
 
 echo "------------------------------------------------------------------------------"
 echo ""
-echo "Notice to PuTTy Users:"
+echo "NOTICE to PuTTy Users:"
 echo "If you are using PuTTy as your SSH client, and you try to copy via Ctrl-C,"
 echo "this will kill the script. Do not use Ctrl-C." 
 echo ""
