@@ -519,13 +519,12 @@ get_user_input() {
 ############################
 update_historia_conf() {
     local conf_file="$HOME/.historiacore/historia.conf"
-    local bls_public_key="your_bls_public_key"  # Replace with the actual BLS public key
 
     # Check if the configuration file exists
     if [ -f "$conf_file" ]; then
         # Use sed to replace the lines in the configuration file
         sed -i 's/^#masternode=1/masternode=1/' "$conf_file"
-        sed -i "s/^#masternodeblsprivkey=/masternodeblsprivkey=$bls_public_key/" "$conf_file"
+        sed -i "s/^#masternodeblsprivkey=/masternodeblsprivkey=$bls_secret" "$conf_file"
         sed -i 's/^#masternodecollateral=5000/masternodecollateral=5000/' "$conf_file"
 
         echo "Configuration file updated successfully."
