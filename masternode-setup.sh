@@ -132,6 +132,7 @@ next_steps() {
    echo "        You can do this by clicking Tools > Debug console to open the console."
    echo "------------------------------------------------------------------------------"
    echo ""
+   sudo ufw disable
 }
 ############################
 
