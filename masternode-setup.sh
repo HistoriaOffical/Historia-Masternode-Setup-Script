@@ -3,7 +3,7 @@
 collateral_address="unknown"
 domain_name="unknown"
 current_ip="uknown"
-ipfs_id="unknow"
+ipfs_id="unknown"
 tx_id="unknown"
 tx_index="unknown"
 
@@ -26,7 +26,7 @@ collateral_address="unknown"
 ############################
 # Function to get the public IP address of the host
 get_public_ip() {
-    dig +short myip.opendns.com @resolver1.opendns.com
+    dig +short myip.opendns.com @208.67.222.222
 }
 ############################
 
