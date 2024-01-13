@@ -133,6 +133,9 @@ rm historiacore-0.17.1-x86_64-linux-gnu.tar.gz
 rm -r historiacore-0.17.1/
 cd ~/.historiacore/sentinel/
 git pull
+virtualenv venv
+venv/bin/pip install -r requirements.txt
+venv/bin/python bin/sentinel.py
 
 config_content="masternodedns=$domain_name"
 
