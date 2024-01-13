@@ -22,5 +22,7 @@ To use the Masternode Update script:
 6. Follow the directions
 
 If you see any errors please come into Discord or Telegram for help.
+
 Telegram: https://t.me/HistoriaHTA
+
 Discord: https://discordapp.com/invite/b3FJPpn
