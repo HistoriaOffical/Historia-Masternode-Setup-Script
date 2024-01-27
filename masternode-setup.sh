@@ -523,11 +523,12 @@ update_historia_conf() {
     # Check if the configuration file exists
     if [ -f "$conf_file" ]; then
         # Use sed to replace the lines in the configuration file
-        sed -i 's/^#masternode=1/masternode=1/' "$conf_file"
-        sed -i "s/^#masternodeblsprivkey=/masternodeblsprivkey=$bls_secret" "$conf_file"
-        sed -i 's/^#masternodecollateral=5000/masternodecollateral=5000/' "$conf_file"
 
-        echo "Configuration file updated successfully."
+       echo "masternode=1" >> "$conf_file"
+       echo "masternodeblsprivkey=$bls_secret" >> "$conf_file"
+       echo "masternodecollateral=5000" >> "$conf_file"
+       echo "masternodedns=$domain_name" >> "$conf_file"
+       echo "Configuration file updated successfully."
         # Restart historiad
         $HOME/.historiacore/historia-cli stop
     else
