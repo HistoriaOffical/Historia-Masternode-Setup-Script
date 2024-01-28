@@ -93,7 +93,7 @@ install_dependencies() {
     echo ""
     sudo apt update 
     sudo apt upgrade -y 
-    sudo apt install -y python virtualenv git unzip pv golang-go 
+    sudo apt install -y python virtualenv git unzip pv golang-go snapd 
     echo "--------------------------------------------------------"
     echo "Completed updating system and installing necessary packages"
     echo "--------------------------------------------------------"
